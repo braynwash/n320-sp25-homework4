@@ -1,16 +1,25 @@
 {
   "name": "n320-sp25-homework4",
   "version": "1.0.0",
-  "description": "### Live Link   [Home Page](https://google.com)",
+  "description": "### Project Summary PRESIDENT",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "serve": "node server.js"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braynwash/n320-sp25-homework4.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/braynwash/n320-sp25-homework4/issues"
+  },
+  "homepage": "https://github.com/braynwash/n320-sp25-homework4#readme",
   "dependencies": {
+    "mime-types": "^2.1.35",
     "nodemon": "^3.1.9"
   }
 }
