@@ -1,8 +1,21 @@
-##  
+## Assignment 4
 
- ### Live Link 
- [Home Page](https://google.com) 
+### Project Summary PRESIDENT
 
- TODO: add node/nodemon server.js to package.json scripts 
+Brief description of your what your project is about and why you chose that topic.
 
- Created with Create-Erin-App 
+### Live Link PRESIDENT
+
+[Blog Page](https://{username}.github.io/{reponame}/homework-2)
+
+### Key Takeaways ANALYST
+
+Understanding of why we are doing this project
+
+### Design Choices DESIGNER
+
+List color palette used and rationale for top level layout decisions.
+
+### Members & Responsibilities SCRUM
+
+List all members and their roles
