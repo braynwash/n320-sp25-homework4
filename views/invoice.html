@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generation - Cameron</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1>Invoice Generation</h1>
+    <div>
+      <input
+        type="checkbox"
+        id="laptop"
+        name="laptop"
+        value="Laptop"
+        data-price="1244.99"
+      />
+      <label for="laptop">Framez Laptop</label><br />
+      <input
+        type="checkbox"
+        id="rgbKeyboard"
+        name="rgbKeyboard"
+        value="RGB Keyboard"
+        data-price="156.99"
+      />
+      <label for="rgbKeyboard">RGB Keyboard</label><br />
+      <input
+        type="checkbox"
+        id="curvedDisplay"
+        name="curvedDisplay"
+        value="Curved Display"
+        data-price="349.99"
+      />
+      <label for="curvedDisplay">144Hz Curved Monitor</label><br />
+      <input
+        type="checkbox"
+        id="betterLaptop"
+        name="betterLaptop"
+        value="Better Laptop"
+        data-price="1969.99"
+      />
+      <label for="betterLaptop">BetterFrames Laptop</label><br />
+      <button id="genInvoice">Generate Invoice</button>
+    </div>
+
+    <script src="app/invoice.js"></script>
+  </body>
+</html>
