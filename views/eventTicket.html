@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Week 5 - Web Server</title>
+    <title>Course Certificate</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -13,13 +12,13 @@
       <a href="/">Home</a>
       <a href="invoice.html">Invoice</a>
       <a href="courseCertificate.html">Course Certificate</a>
-      <a href="eventTicket.html">Event Ticket</a>
+      <a class="active" href="eventTicket.html">Event Ticket</a>
       <a href="restaurantReceipt.html">Restaurant Receipt</a>
     </nav>
     <div id="app">
-      <h1>ERROR 404</h1>
-      <p>Page Not Found</p>
-      <a href="/">Go home</a>
+      <h1>Event Ticket</h1>
     </div>
+    <script type="module" src="app/event.js"></script>
+    <script type="module" src="app/PDFGenerator.js"></script>
   </body>
 </html>
