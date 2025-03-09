@@ -1,3 +1,6 @@
+import Invoice from "../invoice/invoiceGenerator.js";
+
+// Click handler
 document.getElementById("genInvoice").onclick = function () {
   let items = [];
   console.log("Generating invoice...");
@@ -37,4 +40,10 @@ document.getElementById("genInvoice").onclick = function () {
     });
     console.log(items);
   }
+
+  // Generate the invoice
+  let invoice = new Invoice("Invoice", items);
+  invoice.companyHeader("BetterFrames", "Invoice");
+  invoice.listPurchases();
+  invoice.updatePreview();
 };
