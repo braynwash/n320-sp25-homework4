@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Doppio+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Color Pallet */
+:root {
+  --text: #100a09;
+  --background: #faf2f1;
+  --primary: #d24e42;
+  --secondary: #ee837a;
+  --accent: #f94d3d;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -7,7 +18,9 @@
 html,
 body {
   height: 100%;
-  padding: 10px;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
@@ -21,4 +34,58 @@ p {
 
 a {
   display: block;
+}
+nav {
+  height: 50px;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* font-family: monospace; */
+  font-size: 18px;
+}
+nav a.active {
+  text-decoration: underline;
+}
+
+nav a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--background);
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+#app {
+  padding: 10px;
+}
+
+section {
+  max-width: 500px;
+}
+section:before {
+  content: "PDF Preview";
+  text-align: center;
+  display: block;
+}
+iframe {
+  content: "test";
+  width: 100%;
+  border: 2px solid var(--accent);
+  aspect-ratio: 8.5 / 11;
+}
+
+button {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 5px 9px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+button:hover {
+  color: var(--background);
+  background-color: var(--accent);
 }
