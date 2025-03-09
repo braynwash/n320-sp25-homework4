@@ -4,9 +4,9 @@
 :root {
   --text: #100a09;
   --background: #faf2f1;
-  --primary: #d24e42;
+  --primary: rgb(210, 78, 66);
   --secondary: #ee837a;
-  --accent: #f94d3d;
+  --accent: rgb(249, 77, 61);
 }
 
 /* Reset */
@@ -34,6 +34,11 @@ p {
 
 a {
   display: block;
+  color: var(--primary);
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
 }
 nav {
   height: 50px;
@@ -88,4 +93,29 @@ button {
 button:hover {
   color: var(--background);
   background-color: var(--accent);
+}
+
+/* EVENT TICKETS */
+.eventTicket {
+  border: 1px solid var(--text);
+  max-width: 700px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+.eventTicket div {
+  padding-top: 5px;
+  flex: 1;
+}
+.eventTicket img {
+  max-width: 200px;
+}
+.eventTicket h2 {
+  margin-bottom: 0px;
+}
+.eventTicket span {
+  display: block;
+  padding-left: 5px;
 }
