@@ -17,28 +17,23 @@
     </nav>
     <div id="app">
       <h1>Your Events</h1>
+      <label for="name" class="block">Your Name</label>
+      <input name="name" id="nameInput" placeholder="Name" type="text" />
       <p>select an event to see your ticket.</p>
       <div class="eventTicket">
-        <img
-          src="https://www.tcocdn.com/wp-content/uploads/2020/05/CarSeatHeadrest-5-copy-scaled.jpg"
-          alt=""
-          srcset="" />
+        <img src="./images/csh.png" alt="" srcset="" />
         <div>
-          <h2><a>Car Seat Headrest</a></h2>
+          <h2 id="CSH"><a>Car Seat Headrest</a></h2>
           <span>Sat • Jul 26, 2025 • 6:30 PM</span>
           <span>The Salt Shed Outdoors (Fairgrounds), Chicago, IL</span>
         </div>
       </div>
       <div class="eventTicket">
-        <img
-          id="ticketImage1"
-          src="https://www.tcocdn.com/wp-content/uploads/2020/05/CarSeatHeadrest-5-copy-scaled.jpg"
-          alt=""
-          srcset="" />
+        <img id="ticketImage1" src="./images/moonwalker.jpg" alt="" srcset="" />
         <div>
-          <h2><a>Car Seat Headrest</a></h2>
-          <span>Sat • Jul 26, 2025 • 6:30 PM</span>
-          <span>The Salt Shed Outdoors (Fairgrounds), Chicago, IL</span>
+          <h2 id="MoonWalker"><a>Moon Walker</a></h2>
+          <span>Wed • May 14, 2025 • 8:00 PM</span>
+          <span>Turntable, Indianapolis, IN</span>
         </div>
       </div>
       <button id="downloadPdf">Save Pdf</button>
