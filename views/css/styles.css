@@ -60,6 +60,7 @@ nav a:hover {
 #app {
   padding: 10px;
 }
+<<<<<<< HEAD
 
 section {
   max-width: 500px;
@@ -89,3 +90,5 @@ button:hover {
   color: var(--background);
   background-color: var(--accent);
 }
+=======
+>>>>>>> 04c142df5e34640c9ba3ecf17d50d0583e32b563

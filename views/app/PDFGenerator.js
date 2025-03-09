@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import { jsPDF } from "./jspdf.es.js";
+=======
+import jsPDF from "./jspdf.es.js";
+>>>>>>> 04c142df5e34640c9ba3ecf17d50d0583e32b563
 
 class PDFGenerator {
   constructor(title = "Document") {
     this.doc = new jsPDF();
     this.title = title;
+<<<<<<< HEAD
     this.fontSize = 18;
     this.font = "Helvetica";
     this.doc.setFont(this.font, "normal");
@@ -12,12 +17,15 @@ class PDFGenerator {
     document.querySelector("#downloadPdf").addEventListener("click", () => {
       this.save(this.title);
     });
+=======
+>>>>>>> 04c142df5e34640c9ba3ecf17d50d0583e32b563
   }
 
   setTitle(title) {
     this.title = title;
   }
 
+<<<<<<< HEAD
   addHeader(text) {
     // Draw header text.
     this.doc.setFontSize(24);
@@ -50,15 +58,41 @@ class PDFGenerator {
 
   getPdfUrl() {
     return this.doc.output("bloburl");
+=======
+  addText(text, x = 10, y = 10) {
+    this.doc.text(text, x, y);
+  }
+
+  generateWithHtml(input = "no input") {
+    this.doc.html(document.body, {
+      callback: function (doc) {
+        doc.save();
+      },
+    });
+>>>>>>> 04c142df5e34640c9ba3ecf17d50d0583e32b563
   }
 
   save(filename = "document.pdf") {
     this.doc.save(filename);
   }
+<<<<<<< HEAD
 
   updatePreview() {
     document.querySelector("#pdf-preview").src = this.getPdfUrl();
   }
 }
 
+=======
+}
+
+let test = new PDFGenerator();
+test.generateWithHtml(`
+  <h1>Testing</h1>
+  <ol>
+  <li>test</li>
+  <li>test</li>
+  <li>test</li>
+  </ol>`);
+
+>>>>>>> 04c142df5e34640c9ba3ecf17d50d0583e32b563
 export default PDFGenerator;
