@@ -7,40 +7,30 @@ class Invoice extends PDFGenerator {
     console.log("Invoice constructor: ", this.items);
   }
 
-  companyHeader(header = "Our Company", subHeader = "Invoice") {
-    // Draw header text.
-    this.doc.setFontSize(24);
-    this.doc.setFont(this.font, "bold");
-    this.addText(header, 10, null, 10);
-
-    // Draw subheader
-    this.doc.setFontSize(18);
-    this.doc.setFont(this.font, "semi-bold");
-    this.addText(subHeader, 10, null, 10);
-
-    // Draw the <hr>
-    let lineY = this.currentY - 7.5;
-    this.doc.setDrawColor(255, 0, 0);
-    this.doc.setFillColor(255, 0, 0);
-    this.doc.rect(
-      10,
-      lineY,
-      this.doc.internal.pageSize.getWidth() - 20,
-      1,
-      "DF"
-    );
-
-    // Add space after Header
-    this.addText("", 10, null, 1);
-
-    // Reset font style
-    this.doc.setFontSize(this.fontSize);
-    this.doc.setFont(this.font, "normal");
+  invoiceDetails() {
+    // "invoice" and current date
+    this.setFontSize(16);
+    this.addText("Invoice " + new Date().toDateString(), 10, null, 8);
+    this.resetFontSize();
   }
 
   listPurchases() {
+    this.currentY += 10;
+    this.doc.rect(10, this.currentY, 200, this.items.length * 10);
+    this.addText(
+      "Item Name | Item Price | Quantity Ordered | Total Price of Item"
+    );
     for (let i = 0; i < this.items.length; i++) {
-      this.addText(`${this.items[i].name} - $${this.items[i].price}`);
+      this.addText(
+        `${this.items[i].name} | $${this.items[i].price} | ${
+          this.items[i].quantity
+        } | $${this.items[i].price * this.items[i].quantity}`,
+        10,
+        null,
+        6
+      );
+      this.doc.line(10, this.currentY, 210, this.currentY);
+      //   this.addText(`${this.items[i].name} - $${this.items[i].price}`);
     }
   }
 }

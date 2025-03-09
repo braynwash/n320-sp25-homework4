@@ -16,38 +16,15 @@
     </nav>
     <div id="app">
       <h1>Invoice Generation</h1>
-      <input
-        type="checkbox"
-        id="laptop"
-        name="laptop"
-        value="Laptop"
-        data-price="1244.99"
-      />
-      <label for="laptop">Framez Laptop</label><br />
-      <input
-        type="checkbox"
-        id="rgbKeyboard"
-        name="rgbKeyboard"
-        value="RGB Keyboard"
-        data-price="156.99"
-      />
-      <label for="rgbKeyboard">RGB Keyboard</label><br />
-      <input
-        type="checkbox"
-        id="curvedDisplay"
-        name="curvedDisplay"
-        value="Curved Display"
-        data-price="349.99"
-      />
-      <label for="curvedDisplay">144Hz Curved Monitor</label><br />
-      <input
-        type="checkbox"
-        id="betterLaptop"
-        name="betterLaptop"
-        value="Better Laptop"
-        data-price="1969.99"
-      />
-      <label for="betterLaptop">BetterFrames Laptop</label><br />
+      <h3 class="invoiceHeaders">What would you like to purchase?</h3>
+      <div class="buttons">
+        <button id="laptop">Framez Laptop - 1244.99</button>
+        <button id="rgbKeyboard">RGB Keyboard - 156.99</button>
+        <button id="curvedDisplay">144Hz Curved Monitor - 349.99</button>
+        <button id="betterLaptop">BetterFramez Laptop - 1969.99</button>
+      </div>
+
+      <h3 class="invoiceHeaders">Ready to Check Out?</h3>
       <button id="genInvoice">Generate Invoice</button>
 
       <h2>Invoice</h2>
