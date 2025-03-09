@@ -42,7 +42,7 @@ function generateRandomString(length) {
 }
 
 document.getElementById("CSH").addEventListener("click", () => {
-  const eventPdf = new CustomPDF();
+  const eventPdf = new CustomPDF("CSH-Ticket");
   eventPdf.addHeader("Your ticket");
   eventPdf.createTicket(
     "./images/csh.png",
@@ -55,7 +55,7 @@ document.getElementById("CSH").addEventListener("click", () => {
 });
 
 document.getElementById("MoonWalker").addEventListener("click", () => {
-  const eventPdf = new CustomPDF();
+  const eventPdf = new CustomPDF("MoonWalker-Ticket");
   eventPdf.addHeader("Your ticket");
   eventPdf.createTicket(
     "./images/moonwalker.jpg",
