@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course Certificate</title>
+    <title>N428 Course Quiz - Jeremy</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -16,8 +16,8 @@
       <a href="restaurantReceipt.html">Restaurant Receipt</a>
     </nav>
     <div id="app">
-      <h1>N428 - Advanced Dessert Decorating</h1>
-      <p>Welcome to the final assessment for N428. Upon completing this quiz, you will recieve a certificate indicting your completion. <br> This final has 2 multiple choice questions- take your time and answer as best you can!</p>
+      <h1>N428 - Advanced Dessert Decorating </h1>
+      <p>Welcome to the final assessment for N428. Upon completing this quiz, you will recieve a certificate indicting your completion with your final score. <br> This final has 2 multiple choice questions- take your time and answer as best you can!</p>
 
       <!-- name input -->
       <label class="block" for="coureName">What is your name?</label>
@@ -28,28 +28,27 @@
       <form id="quiz">
           <div class="question">
               <p>1. What type of icing do you put on a vanilla cake?</p>
-              <input type="radio" name="q1" value="chocolate" required/> Chocolate<br>
+              <input type="radio" name="q1" value="chocolate"/> Chocolate<br>
               <input type="radio" name="q1" value="vanilla" /> Vanilla<br>
               <input type="radio" name="q1" value="strawberry" /> Strawberry<br>
           </div>
           <div class="question">
               <p>2. If you're making sea salt caramels, what will you top the caramels with?</p>
-              <input type="radio" name="q2" value="salt" required/> Normal salt<br>
+              <input type="radio" name="q2" value="salt"/> Normal salt<br>
               <input type="radio" name="q2" value="pSugar" /> Powdered sugar<br>
               <input type="radio" name="q2" value="seaSalt" /> Sea salt<br>
           </div>
           <button type="button" id="submitQuiz">Submit</button>
       </form>
       
-      
-      <button id="viewCertificate" style="display:none;">View Certificate</button>
       <button id="downloadPdf" style="display:none;">Download Certificate</button>
       
       <section>
           <iframe id="pdf-preview" frameborder="0"></iframe>
       </section>
   </div>
-    <script type="module" src="app/event.js"></script>
-    <script type="module" src="app/PDFGenerator.js"></script>
+  
+    <script type="module" src="app/certificate/certificate.js"></script>
+    <script type="module" src="app/certificate/certificateGenerator.js"></script>
   </body>
 </html>
