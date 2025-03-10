@@ -8,9 +8,14 @@ The following project is a combination of four different use cases for live PDF 
 
 [Github repo link](https://github.com/braynwash/n320-sp25-homework4)
 
-### Key Takeaways ANALYST
+### Key Takeaways
 
-Understanding of why we are doing this project
+This project allows users to:
+* Dynamically create, view, and download PDFs based on their input.
+     * This allows for a <i>LOT</i> of different applications, and allows for dynamic document creation.
+     * Users can also edit the PDF (indirectly) through things like forms and text inputs.
+* Use a previously made PDF generator and create unique extensions of it.
+    * This gave the team a lot of practice with collaboration, and utilizing code that wasn't made by them. 
 
 ### Design Choices
 
@@ -37,7 +42,7 @@ The Cremebrulees
   - [Project Summary and Live Link](#project-summary)
   - [Course Certificate](views/courseCertificate.html)
 - Ev - Analyst
-  - [Key Takeaways](#key-takeaways-analyst)
+  - [Key Takeaways](#key-takeaways)
 - Cameron - Scrum Master
   - [Members & Responsibilities](#members--responsibilities)
   - [Invoice](views/invoice.html)
