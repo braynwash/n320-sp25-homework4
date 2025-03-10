@@ -1,18 +1,18 @@
 ## Assignment 4
 
-### Project Summary PRESIDENT
+### Project Summary
 
-Brief description of your what your project is about and why you chose that topic.
+The following project is a combination of four different use cases for live PDF generation using Node.js (and the jsPDF library). Each generator is designed to dynamically create and display PDFs based on user input with an option to download the final generated PDFs. All four use cases extend a PDFGenerator class, utilizing JS OOP principles to make the project extensible and easy to develop as all four use cases don't need to build their own PDF generator logic. Despite all cases being different, all pages follow the same/similar layout and styling to keep a cohesive theme.
 
-### Live Link PRESIDENT
+### Repo Link
 
-[Blog Page](https://{username}.github.io/{reponame}/homework-2)
+[Github repo link](https://github.com/braynwash/n320-sp25-homework4)
 
 ### Key Takeaways ANALYST
 
 Understanding of why we are doing this project
 
-### Design Choices DESIGNER
+### Design Choices
 
 List color palette used and rationale for top level layout decisions.
 
