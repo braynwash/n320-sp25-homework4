@@ -24,6 +24,20 @@ I used realtimecolors.com to generate a color palette on a preview site. I event
 `--secondary: #ee837a;`
 `--accent: #f94d3d;`
 
-### Members & Responsibilities SCRUM
+### Members & Responsibilities
 
-List all members and their roles
+The Cremebrulees
+
+- Erin - Designer
+  - [Design Choices](#design-choices)
+  - [PDFGenerator](views/app/PDFGenerator.js)
+  - [Landing Page](views/index.html)
+  - [Event Ticket](views/eventTicket.html)
+- Jeremy - President
+  - [Project Summary and Live Link](#project-summary)
+  - [Course Certificate](views/courseCertificate.html)
+- Ev - Analyst
+  - [Key Takeaways](#key-takeaways-analyst)
+- Cameron - Scrum Master
+  - [Members & Responsibilities](#members--responsibilities)
+  - [Invoice](views/invoice.html)
