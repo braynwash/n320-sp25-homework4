@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course Certificate</title>
+    <title>Restaurant Receipt- Ev</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -16,8 +16,44 @@
       <a class="active" href="restaurantReceipt.html">Restaurant Receipt</a>
     </nav>
     <div id="app">
-      <h1>Restaurant Receipt</h1>
+      <h1>Ev's Egg-cellent Eggs</h1>
+      <div class="eggMenu">
+        <div class="menuOpt">
+          <h3>Omelette</h3>
+          <img src="images/omelette.png" alt="A Picture of an omelette">
+          <p>$8.99</p>
+          <button id="omelette">Add to Cart</button>
+        </div>
+        <div class="menuOpt">
+          <h3>Creme Brulee</h3>
+          <img src="images/cremeBrulee.png" alt="A Picture of an omelette">
+          <p>$4.99</p>
+          <button id="cremeBrulee">Add to Cart</button>
+
+        </div>
+        <div class="menuOpt">
+          <h3>Egg</h3>
+          <img src="images/egg.png" alt="A Picture of an omelette">
+          <p>$1.99</p>
+          <button id="egg">Add to Cart</button>
+        </div>
+        <div class="menuOpt">
+          <h3>Check Out</h3>
+          <img src="images/cart.png" alt="A Picture of an omelette">
+          <p>Ready to check out?</p>
+          <button id="checkOut">Check Out</button>
+        </div>
+      </div>
+
+      <div class="recipt">
+        <h2>Receipt</h2>
+        <section style="display: none" id="pdfPreviewer">
+          <iframe id="pdf-preview" frameborder="0"></iframe>
+        </section>
+        <button style="display: none" id="downloadPdf">Download Receipt</button>
+      </div>
     </div>
-    <script src="app/app.js"></script>
+    <script type="module" src="app/receipt/receipt.js"></script>
+   
   </body>
 </html>

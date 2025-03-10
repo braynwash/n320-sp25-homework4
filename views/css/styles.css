@@ -149,3 +149,33 @@ input[type="text"] {
   margin-top: 10px;
   margin-bottom: 25px;
 }
+
+
+/* Restaurant Page */
+.eggMenu {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  .menuOpt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    padding: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 25px;
+    width: 200px;
+    height: 400px;
+    margin-bottom: 25px;
+    img {
+      max-height: 200px;
+      max-width: 200px;
+      border-radius: 25px;
+      margin-bottom: 20px;
+    }
+  }
+}
