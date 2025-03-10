@@ -27,7 +27,12 @@ class CustomPDF extends PDFGenerator {
     this.setFontWeight("normal");
     this.addText(eventTime, 56, null, 7);
     this.addText(eventLocation, 56, null, 5);
-    this.addText(`Name: ${document.getElementById("nameInput").value}`, 56, null, 8);
+    this.addText(
+      `Name: ${document.getElementById("nameInput").value}`,
+      56,
+      null,
+      8
+    );
     this.addText(`TicketID: ${generateRandomString(7)}`, 56, null, 5);
   }
 }

@@ -138,3 +138,14 @@ input[type="text"] {
   margin-top: 10px;
   margin-bottom: 0;
 }
+
+/* Course Certificate */
+.question {
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+#courseName {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
