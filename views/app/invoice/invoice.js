@@ -40,6 +40,9 @@ document.getElementById("betterLaptop").onclick = function () {
 
 // Click handler
 document.getElementById("genInvoice").onclick = function () {
+  // clear the array
+  items = [];
+
   // Add items to the array
   if (laptop.quantity > 0) items.push(laptop);
   if (keyboard.quantity > 0) items.push(keyboard);
@@ -50,6 +53,13 @@ document.getElementById("genInvoice").onclick = function () {
   let invoice = new Invoice("Invoice", items);
   invoice.addHeader("BetterFrames Gaming Tech");
   invoice.invoiceDetails();
-  invoice.listPurchases();
+  // invoice.listPurchases();
+  invoice.purchaseTable();
+  invoice.displayFinalPrice();
+  invoice.signatureLine();
   invoice.updatePreview();
+
+  // Show the download button and PDF previewer
+  document.getElementById("downloadPdf").style.display = "block";
+  document.getElementById("pdfPreviewer").style.display = "block";
 };

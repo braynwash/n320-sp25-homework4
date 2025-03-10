@@ -10,28 +10,75 @@ class Invoice extends PDFGenerator {
   invoiceDetails() {
     // "invoice" and current date
     this.setFontSize(16);
-    this.addText("Invoice " + new Date().toDateString(), 10, null, 8);
+    this.addText("Invoice", 10, null, 8);
+    this.addText(new Date().toDateString(), 10, null, 8);
     this.resetFontSize();
   }
 
-  listPurchases() {
-    this.currentY += 10;
-    this.doc.rect(10, this.currentY, 200, this.items.length * 10);
-    this.addText(
-      "Item Name | Item Price | Quantity Ordered | Total Price of Item"
+  purchaseTable() {
+    this.currentY += 20;
+
+    // create table format
+    this.doc.rect(10, this.currentY, 145, this.items.length * 9);
+    this.doc.rect(70, this.currentY, 50, this.items.length * 9);
+    this.doc.line(
+      100,
+      this.currentY,
+      100,
+      this.currentY + this.items.length * 9
     );
+
+    // create header row
+    this.setFontWeight("bold");
+    this.doc.text("Item Name", 15, this.currentY - 2);
+    this.doc.text("Item Price", 75, this.currentY - 2);
+    this.doc.text("Quantity", 100, this.currentY - 2);
+    this.doc.text("Total Price", 125, this.currentY - 2);
+    this.setFontWeight("normal");
+
+    // create data rows
     for (let i = 0; i < this.items.length; i++) {
+      this.currentY += 8;
+      this.addText(this.items[i].name, 15, this.currentY, 6);
+      this.addText("$" + this.items[i].price, 75, this.currentY, 6);
+      this.addText(`${this.items[i].quantity}`, 105, this.currentY, 6);
       this.addText(
-        `${this.items[i].name} | $${this.items[i].price} | ${
-          this.items[i].quantity
-        } | $${this.items[i].price * this.items[i].quantity}`,
-        10,
-        null,
+        "$" + (this.items[i].price * this.items[i].quantity).toFixed(2),
+        125,
+        this.currentY,
         6
       );
-      this.doc.line(10, this.currentY, 210, this.currentY);
-      //   this.addText(`${this.items[i].name} - $${this.items[i].price}`);
+
+      // draw row line unless it's the last row
+      if (i !== this.items.length - 1) {
+        this.doc.line(10, this.currentY + 2, 155, this.currentY + 2);
+      }
     }
+  }
+
+  displayFinalPrice() {
+    // get the total
+    let total = 0;
+    for (let i = 0; i < this.items.length; i++) {
+      total += this.items[i].price * this.items[i].quantity;
+    }
+
+    // display the total
+    this.currentY += 20;
+    this.setFontWeight("bold");
+    this.setFontSize(14);
+    this.addText("Total: $" + total.toFixed(2), 10, null, 7);
+    this.resetFontSize();
+    this.setFontWeight("normal");
+  }
+
+  signatureLine() {
+    this.currentY += 20;
+
+    // draw the signature line
+    this.doc.line(10, this.currentY, 155, this.currentY);
+    this.setFontSize(10);
+    this.addText("Signature", 10, this.currentY + 3, 5);
   }
 }
 
